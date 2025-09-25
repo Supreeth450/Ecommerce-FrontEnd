@@ -1,0 +1,184 @@
+/* assets/modalStyles.css */
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+/* Modal Content Box */
+.modal-content {
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 550px;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* Form Styling */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-form-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form-item label {
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #555;
+}
+
+.modal-form-item input,
+.modal-form-item textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Important for padding and width */
+  transition: border-color 0.2s;
+}
+
+.modal-form-item input:focus,
+.modal-form-item textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.modal-form-item textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Button Styling */
+.modal-content button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  margin-top: 15px;
+  margin-right: 10px;
+}
+
+.modal-content button:hover {
+  transform: translateY(-2px);
+}
+
+/* Primary Button (Submit, Delete, etc.) */
+.modal-content button:first-of-type {
+  background-color: #007bff;
+  color: white;
+}
+
+.modal-content button:first-of-type:hover {
+  background-color: #0056b3;
+}
+
+/* Secondary Button (Cancel, Close) */
+.modal-content button:last-of-type {
+  background-color: #6c757d;
+  color: white;
+}
+
+.modal-content button:last-of-type:hover {
+  background-color: #5a6268;
+}
+
+/* Product & User Details Display */
+.full-products, .user-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.product-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.product-details.img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.product-details-info {
+  width: 100%;
+}
+
+.user-details p {
+  margin: 5px 0;
+  line-height: 1.6;
+}
+
+.user-details strong {
+  color: #333;
+}
+
+/* Business Analytics Display */
+.business-response-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.business-response-item div:first-child {
+  font-weight: 600;
+  color: #444;
+}
+
+.business-response-item h5 {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0 5px;
+  font-size: 1.1rem;
+  color: #333;
+}

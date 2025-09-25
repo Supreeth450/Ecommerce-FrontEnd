@@ -1,0 +1,164 @@
+/* --- Profile Page Styles --- */
+
+/* Container */
+.profile-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem 1.5rem;
+  background-color: #f4f4f9; /* Matches global theme */
+  font-family: 'Nunito Sans', sans-serif;
+  min-height: calc(100vh - 120px); /* space for header/footer */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Back Button */
+.back-btn {
+  background-color: #007BFF; /* Theme blue */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: fit-content;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Banner Section */
+.profile-banner {
+  background: linear-gradient(135deg, #007BFF, #2c3e50); /* Gradient theme */
+  color: #fff;
+  padding: 2.5rem 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.profile-avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.profile-username {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+
+.profile-role {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* Profile Card */
+.profile-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.card-content p {
+  font-size: 1.05rem;
+  margin: 0.8rem 0;
+  color: #555;
+}
+
+.card-content strong {
+  color: #2c3e50;
+}
+
+/* Loading & Error States */
+.loading, .not-authorized {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 3rem;
+  font-weight: 600;
+}
+
+.loading {
+  color: #007BFF;
+}
+
+.not-authorized {
+  color: #e74c3c;
+  background: #fbecec;
+  border: 1px solid #e74c3c;
+  padding: 1rem;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profile-username {
+    font-size: 1.6rem;
+  }
+
+  .profile-card {
+    padding: 1.5rem;
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+  }
+
+  .card-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-avatar {
+    width: 90px;
+    height: 90px;
+  }
+
+  .profile-username {
+    font-size: 1.3rem;
+  }
+
+  .profile-role {
+    font-size: 0.8rem;
+  }
+
+  .profile-card {
+    padding: 1rem;
+  }
+}
+.auth-page-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem; /* Adds some space from the corner */
+  z-index: 10;   /* Ensures it stays on top of other elements */
+}

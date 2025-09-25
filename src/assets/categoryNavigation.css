@@ -1,0 +1,46 @@
+/* ./assets/categoryNavigation.css */
+
+.category-wrapper {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.category-list {
+  list-style: none;
+}
+
+.category-item {
+  padding: 0.85rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--text-secondary);
+  position: relative;
+  overflow: hidden;
+  transition: color var(--transition-speed) ease;
+}
+
+.category-item:hover {
+  color: var(--accent-color);
+  background-color: #f3f4f6; /* Light hover background */
+}
+
+/* --- Fancy Hover Animation --- */
+.category-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background-color: var(--accent-color);
+  transform: translateX(-100%);
+  transition: transform var(--transition-speed) cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.category-item:hover::before {
+  transform: translateX(0);
+}

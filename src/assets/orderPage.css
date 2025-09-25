@@ -1,0 +1,165 @@
+/* --- Google Font Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap');
+
+/* --- Global Styles --- */
+body {
+  margin: 0;
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: #f4f4f9; /* Soft, light gray background */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* --- Main Layout --- */
+.customer-homepage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1; /* This makes the main content grow to push the footer down */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+}
+
+/* --- Typography & Helper Classes --- */
+.form-title {
+  text-align: center;
+  color: #2c3e50; /* Dark, muted blue */
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.error-message {
+  color: #e74c3c; /* Bright red for errors */
+  background-color: #fbecec;
+  border: 1px solid #e74c3c;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Styling for "Loading orders..." and "No orders found." paragraphs */
+.main-content > p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #667;
+}
+
+/* --- Orders List Grid --- */
+.orders-list {
+  display: grid;
+  /* Creates a responsive grid that fits as many cards as possible */
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 2rem;
+}
+
+/* --- Order Card Styling --- */
+.order-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden; /* Keeps content within the rounded corners */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-5px); /* Lifts the card on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.order-card-header {
+  background-color: #007BFF; /* A vibrant blue for the header */
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+}
+
+.order-card-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.order-card-body {
+  display: flex;
+  align-items: flex-start;
+  padding: 1.5rem;
+  gap: 1.5rem; /* Space between image and details */
+}
+
+.order-product-image {
+  width: 120px;
+  height: 120px;
+  object-fit: contain; /* Shows full image without cropping */
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  flex-shrink: 0; /* Prevents image from shrinking on smaller widths */
+  background-color: #f3f4f6; /* optional: light background for empty spaces */
+  display: block;
+}
+
+
+.order-details {
+  flex: 1; /* Allows details to take up the remaining space */
+}
+
+.order-details h3 {
+  margin: 0 0 0.5rem 0; /* Default spacing for detail lines */
+  font-size: 1rem;
+  font-weight: 400;
+  color: #555;
+}
+
+.order-details h3:last-child {
+  margin-bottom: 0;
+}
+
+/* Style specific details for emphasis */
+.order-details .product-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.75rem;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .form-title {
+    font-size: 2rem;
+  }
+
+  .orders-list {
+    grid-template-columns: 1fr; /* Stack cards into a single column */
+  }
+
+  .order-card-body {
+    flex-direction: column; /* Stack image and details vertically */
+    align-items: center; /* Center items in the card */
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+    .main-content {
+        padding: 1.5rem 1rem;
+    }
+
+    .order-card-body {
+        padding: 1rem;
+    }
+
+    .order-details h3 {
+        font-size: 0.95rem;
+    }
+
+    .order-details .product-name {
+        font-size: 1.1rem;
+    }
+}

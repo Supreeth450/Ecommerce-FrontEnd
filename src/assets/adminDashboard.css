@@ -1,0 +1,131 @@
+/* assets/adminDashboard.css */
+
+/* Global & Body Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+}
+
+/* Main Dashboard Layout */
+.admin-dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.username {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.dropdown-button {
+  background-color: #dc3545;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.dropdown-button:hover {
+  background-color: #c82333;
+}
+
+/* Main Content Area */
+.dashboard-content {
+  flex: 1; /* Takes up remaining vertical space */
+  padding: 30px;
+}
+
+/* Cards Grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+/* Individual Card Styling */
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border-left: 5px solid #007bff;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+  color: #007bff;
+}
+
+.card-description {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.card-team {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #28a745;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Card color variations based on "team" */
+.card:nth-child(4n+2) {
+  border-left-color: #dc3545;
+}
+.card:nth-child(4n+2) .card-title {
+  color: #dc3545;
+}
+.card:nth-child(4n+2) .card-team {
+  background-color: #6f42c1;
+}
+
+.card:nth-child(4n+3) {
+  border-left-color: #ffc107;
+}
+.card:nth-child(4n+3) .card-title {
+  color: #ffc107;
+}
+.card:nth-child(4n+3) .card-team {
+  background-color: #17a2b8;
+}

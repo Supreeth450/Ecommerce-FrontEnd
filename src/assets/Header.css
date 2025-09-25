@@ -1,0 +1,30 @@
+/* ./assets/Header.css */
+
+.header {
+  background-color: var(--surface-color);
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-speed) ease;
+}
+
+.header:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}

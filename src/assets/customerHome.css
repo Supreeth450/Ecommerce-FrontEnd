@@ -1,0 +1,122 @@
+/* ./assets/customerHome.css */
+
+/* --- Google Font Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* --- CSS Variables (Theme) --- */
+:root {
+  --primary-color: #0a0a0a;
+  --accent-color: #4f46e5;
+  --background-color: #f9fafb;
+  --surface-color: #ffffff;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --border-color: #e5e7eb;
+  --success-color: #10b981;
+
+  --font-family: 'Poppins', sans-serif;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --border-radius: 8px;
+  --transition-speed: 300ms;
+}
+
+/* --- Global Resets & Base Styles --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/* --- Main Homepage Layout --- */
+.customer-homepage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.homepage-wrapper {
+  display: grid;
+  grid-template-columns: 240px 1fr; /* Sidebar and main content */
+  gap: 2rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  flex-grow: 1;
+}
+
+.navigation {
+  position: sticky;
+  top: 100px; /* Adjust based on header height */
+  height: fit-content;
+}
+
+.main-content {
+  width: 100%;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border-color);
+  display: inline-block;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+  .homepage-wrapper {
+    grid-template-columns: 200px 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .homepage-wrapper {
+    grid-template-columns: 1fr; /* Stack sidebar and content */
+  }
+
+  .navigation {
+    position: static;
+    top: auto;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.search-box input {
+  width: 60%;
+  max-width: 500px;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+  border-color: #2874f0;
+  box-shadow: 0 0 6px rgba(40, 116, 240, 0.3);
+}
