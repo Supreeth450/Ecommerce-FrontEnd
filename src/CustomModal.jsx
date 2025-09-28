@@ -496,6 +496,7 @@ const ModifyUserFormComponent = ({ onClose }) => {
   const [userId, setUserId] = useState(null);
   const [userDetails, setUserDetails] = useState(null);
   const [updated, setUpdated] = useState(false);
+    const API_BASE = import.meta.env.VITE_API_BASE_URL;
 
   const handleFetchUser = async (e) => {
     e.preventDefault();
